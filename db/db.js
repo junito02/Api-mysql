@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const db = mysql.createConnection({
-  host: process.env.DB_HOST || "ballast.proxy.rlwy.net",
-  port: process.env.DB_PORT || 53473,
+  host: process.env.DB_HOST || "turntable.proxy.rlwy.net",
+  port: process.env.DB_PORT ? Number(process.env.DB_PORT) : 58523, // convierte a número
   user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "kSMVFOgiDIocjHmxucmSRURHgIlCkEbb",
+  password: process.env.DB_PASSWORD || "OQcGOKbYikjtORoeSzBGrpVQZfCiBVoc",
   database: process.env.DB_DATABASE || "railway",
 });
 
